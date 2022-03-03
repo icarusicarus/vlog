@@ -6,9 +6,9 @@ const main = require('./router/main');
 dotenv.config();
 
 const app = express();
-app.set("port", process.env.PORT || 5000);
+app.set("port", 5000);
 
-app.use('/', main);
+app.use('/api', main);
 
 app.listen(app.get('port'), function () {
     console.log('[Listening] localhost @', app.get('port'));
